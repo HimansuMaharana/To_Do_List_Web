@@ -1,0 +1,185 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Sets the font for the entire body */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    background-color: #f1f3f4; /* Sets light gray background */
+    color: #202124; /* Sets dark gray text color */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Sets height to full viewport height */
+}
+
+.container {
+    width: 100%; /* Makes container responsive */
+    max-width: 500px; /* Limits maximum width */
+    background: white; /* Sets white background */
+    border-radius: 12px; /* Rounds corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow */
+    padding: 20px; /* Adds padding inside the container */
+    text-align: center; /* Centers text inside the container */
+    overflow: hidden; /* Prevents content from overflowing */
+}
+
+header {
+    display: flex; /* Uses flexbox for header layout */
+    justify-content: space-between; /* Distributes space evenly */
+    align-items: center; /* Centers items vertically */
+    margin-bottom: 15px; /* Adds margin below the header */
+}
+
+h1 {
+    font-weight: 500; /* Sets font weight */
+    font-size: 22px; /* Sets font size */
+    margin: 0; /* Removes default margin */
+}
+
+#theme-toggle {
+    border: none; /* Removes border */
+    background: transparent; /* Makes background transparent */
+    font-size: 1.5rem; /* Sets font size */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: color 0.3s; /* Adds smooth transition for color change */
+}
+
+.task-input {
+    display: flex; /* Uses flexbox for input layout */
+    gap: 10px; /* Adds gap between elements */
+    align-items: center; /* Centers items vertically */
+    margin-bottom: 15px; /* Adds margin below input area */
+    flex-wrap: wrap; /* Allows items to wrap onto new lines */
+}
+
+.task-input input, .task-input select {
+    flex-grow: 1; /* Allows elements to grow to fill available space */
+    padding: 12px; /* Adds padding inside input and select elements */
+    border-radius: 8px; /* Rounds corners */
+    border: 1px solid #dcdcdc; /* Adds a light gray border */
+    font-size: 16px; /* Sets font size */
+    width: 100%; /* Makes elements take full width */
+}
+
+.task-input button {
+    background: #1a73e8; /* Sets blue background */
+    color: white; /* Sets white text color */
+    font-weight: 500; /* Sets font weight */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background 0.3s; /* Adds smooth transition for background change */
+    border-radius: 8px; /* Rounds corners */
+    padding: 12px 15px; /* Adds padding inside button */
+    border: none; /* Removes border */
+    width: 100%; /* Makes button take full width */
+}
+
+.task-input button:hover {
+    background: #1765c2; /* Darker blue on hover */
+}
+
+#task-list {
+    list-style: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    max-height: 300px; /* Sets maximum height */
+    overflow-y: auto; /* Adds vertical scrollbar if needed */
+    margin: 10px 0; /* Adds margin */
+    overflow: hidden; /* prevents content from overflowing */
+}
+
+.task-item {
+    display: flex; /* Uses flexbox for task item layout */
+    justify-content: space-between; /* Distributes space evenly */
+    align-items: center; /* Centers items vertically */
+    padding: 12px; /* Adds padding inside task item */
+    border-radius: 8px; /* Rounds corners */
+    background: #fff; /* Sets white background */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    margin-bottom: 10px; /* Adds margin below task item */
+    transition: transform 0.2s; /* Adds smooth transition for transform */
+}
+
+.task-item:hover {
+    transform: scale(1.01); /* Slightly scales up on hover */
+}
+
+.task-priority {
+    padding: 5px 10px; /* Adds padding inside priority tag */
+    border-radius: 6px; /* Rounds corners */
+    font-size: 0.85rem; /* Sets font size */
+    font-weight: bold; /* Sets font weight */
+}
+
+.high { background: #ea4335; color: white; } /* Sets red background for high priority */
+.medium { background: #fbbc04; color: white; } /* Sets yellow background for medium priority */
+.low { background: #34a853; color: white; } /* Sets green background for low priority */
+
+.task-actions button {
+    border: none; /* Removes border */
+    background: none; /* Makes background transparent */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 1.2rem; /* Sets font size */
+    margin-left: 5px; /* Adds margin to the left */
+    transition: opacity 0.3s; /* Adds smooth transition for opacity */
+    padding: 5px; /* Add padding */
+}
+
+.task-actions button:hover {
+    opacity: 0.7; /* Reduces opacity on hover */
+}
+
+.progress-container {
+    margin-top: 15px; /* Adds margin above progress container */
+    text-align: center; /* Centers text inside container */
+}
+
+progress {
+    width: 100%; /* Makes progress bar take full width */
+    height: 10px; /* Sets height */
+    border-radius: 5px; /* Rounds corners */
+    overflow: hidden; /* Prevents content from overflowing */
+    appearance: none; /* Removes default appearance */
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e0e0e0; /* Sets light gray background for progress bar */
+    border-radius: 5px; /* Rounds corners */
+}
+
+progress::-webkit-progress-value {
+    background-color: #1a73e8; /* Sets blue background for progress value */
+    border-radius: 5px; /* Rounds corners */
+}
+
+/* Dark Mode Enhancements */
+.dark-mode {
+    background: #202124; /* Sets dark background */
+    color: #e8eaed; /* Sets light text color */
+}
+
+.dark-mode .container {
+    background: #303134; /* Sets darker background for container */
+    box-shadow: none; /* Removes shadow */
+}
+
+.dark-mode .task-item {
+    background: #3c4043; /* Sets darker background for task item */
+    border-color: #5f6368; /* Sets darker border color */
+}
+
+.dark-mode .task-input input, 
+.dark-mode .task-input select, 
+.dark-mode .task-input button {
+    background: #5f6368; /* Sets darker background for input, select, and button */
+    color: white; /* Sets white text color */
+    border: 1px solid #8b8b8b; /* Sets darker border */
+}
+
+.dark-mode progress::-webkit-progress-bar {
+    background-color: #5f6368; /* Sets darker background for progress bar */
+}
+
+.dark-mode progress::-webkit-progress-value {
+    background-color: #8ab4f8; /* Sets lighter blue for progress value */
+}
+
+.dark-mode #theme-toggle {
+    color: white; /* Sets white color for theme toggle */
+}
